@@ -1066,7 +1066,11 @@ pub fn form_body(ui: &mut egui::Ui, f: &mut Map<String, Value>) {
     // come from `__labels` verbatim; everything else goes through the catalogue.
     let labels = f.get("__labels").cloned().unwrap_or(Value::Null);
     let label = |k: &str| labels.get(k).and_then(Value::as_str).map_or_else(|| label_of(k), str::to_string);
-    let keys: Vec<String> = f.keys().filter(|k| !k.starts_with("__")).cloned().collect();
+    let mut keys: Vec<String> = f.keys().filter(|k| !k.starts_with("__")).cloned().collect();
+    if f.get("__command").and_then(Value::as_str) == Some("file.fileInfo") {
+        let order = ["title", "author", "authorTitle", "description", "keywords", "copyrightStatus", "copyright", "copyrightUrl"];
+        keys.sort_by_key(|k| order.iter().position(|field| field == k).unwrap_or(order.len()));
+    }
     egui::Grid::new("form-dialog").num_columns(2).spacing([12.0, 6.0]).show(ui, |ui| {
         for k in keys {
             let v = f.get(&k).cloned().unwrap_or(Value::Null);

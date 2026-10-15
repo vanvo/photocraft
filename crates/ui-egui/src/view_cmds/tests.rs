@@ -208,6 +208,23 @@ fn type_menu_checkmarks_follow_the_layer() {
 }
 
 #[test]
+fn file_info_fields_follow_document_description_order() {
+    use egui_kittest::kittest::Queryable;
+    let mut h = egui_kittest::Harness::builder().with_size(egui::vec2(1100.0, 900.0)).build_eframe(|cc| {
+        PhotocraftApp::setup_context(&cc.egui_ctx, Default::default());
+        let mut app = PhotocraftApp::new(photocraft_engine::Session::new(), crate::Services::default());
+        app.run("prefs.set", json!({"path": "interface.language", "value": "en"})).unwrap();
+        app.run("file.new", json!({"width": 32, "height": 32})).unwrap();
+        menu(&mut app, &cc.egui_ctx, "file.fileInfo", json!({})).unwrap();
+        app
+    });
+    h.run_steps(3);
+    let labels = ["Title", "Author", "Author title", "Description", "Keywords", "Copyright status", "Copyright", "Copyright url"];
+    let ys: Vec<f32> = labels.iter().map(|label| h.get_by_label(label).rect().top()).collect();
+    assert!(ys.windows(2).all(|y| y[0] < y[1]), "File Info field order: {ys:?}");
+}
+
+#[test]
 fn engine_commands_open_their_dialogs() {
     let (mut app, ctx) = app_with(2);
     let d = menu(&mut app, &ctx, "file.automate.fitImage", json!({})).unwrap()["dialog"].as_u64().unwrap();
