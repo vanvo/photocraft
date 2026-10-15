@@ -1,0 +1,8 @@
+asset:        before.png
+title:        PhotoCraft Clone Stamp preview, before fix #5995
+author:       vanvo (synthetic checkerboard and capture); PhotoCraft contributors (application UI)
+source:       original work
+license:      MIT OR Apache-2.0
+license-file: LICENSE-MIT
+added:        2026-10-15 by vanvo
+notes:        Offscreen capture of PhotoCraft with an original synthetic checkerboard; Metal hardware texture filtering, 400% zoom. PhotoCraft/ArtCraft marks are shown only in the context of PhotoCraft.
