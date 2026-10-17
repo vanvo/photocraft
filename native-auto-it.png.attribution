@@ -1,0 +1,8 @@
+asset:        native-auto-it.png
+title:        PhotoCraft native Auto language smoke, Italian
+author:       vanvo (capture); PhotoCraft contributors (application UI)
+source:       original work
+license:      MIT OR Apache-2.0
+license-file: LICENSE-MIT
+added:        2026-10-17 by vanvo
+notes:        Native offscreen capture with PHOTOCRAFT_LOCALE=it-IT, Auto resolves to it. Not a browser runtime capture. Synthetic blank document; no user media. First-party marks remain governed by LICENSE-brand.txt.
