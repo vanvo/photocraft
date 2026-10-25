@@ -1,0 +1,8 @@
+asset:        after.png
+title:        PhotoCraft Color Balance at 800x480, with 24 pt slider rows
+author:       vanvo (capture); PhotoCraft contributors (application UI)
+source:       original work
+license:      MIT OR Apache-2.0
+license-file: LICENSE-MIT
+added:        2026-10-25 by vanvo
+notes:        Original offscreen PhotoCraft capture with a synthetic blank document; no user media. First-party marks remain governed by LICENSE-brand.txt and are shown unchanged in PhotoCraft context.
