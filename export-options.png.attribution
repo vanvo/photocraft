@@ -1,0 +1,8 @@
+asset:        export-options.png
+title:        PhotoCraft Export As settings used for the untagged sRGB regression
+author:       vanvo (capture); PhotoCraft contributors (application UI)
+source:       original work
+license:      MIT OR Apache-2.0
+license-file: LICENSE-MIT
+added:        2026-10-25 by vanvo
+notes:        Native offscreen capture, synthetic untagged document; no user media. Existing JPG, Convert to sRGB and Embed Color Profile controls. JPEG ICC behavior is verified by round-trip tests, not this screenshot. First-party marks remain governed by LICENSE-brand.txt, unchanged in PhotoCraft context.
