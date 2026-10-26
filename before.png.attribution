@@ -1,0 +1,8 @@
+asset:        before.png
+title:        PhotoCraft adjustment layer name click, before the fix
+author:       vanvo (capture); PhotoCraft contributors (application UI)
+source:       original work
+license:      MIT OR Apache-2.0
+license-file: LICENSE-MIT
+added:        2026-10-26 by vanvo
+notes:        Original native macOS offscreen capture, synthetic blank document, no user media. First-party marks shown unchanged in PhotoCraft context remain governed by LICENSE-brand.txt.
