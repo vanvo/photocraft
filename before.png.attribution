@@ -1,0 +1,8 @@
+asset:        before.png
+title:        PhotoCraft Crop proportions after Clear, before the fix
+author:       vanvo (capture); PhotoCraft contributors (application UI)
+source:       original work
+license:      MIT OR Apache-2.0
+license-file: LICENSE-MIT
+added:        2026-10-27 by vanvo
+notes:        Native macOS offscreen screenshot of a synthetic white/red test document. No user media. First-party marks shown unchanged in PhotoCraft context remain governed by LICENSE-brand.txt.
