@@ -1,0 +1,8 @@
+asset:        before.png
+title:        PhotoCraft Image Size after entering 300 ppi, before the fix
+author:       vanvo (capture); PhotoCraft contributors (application UI)
+source:       original work
+license:      MIT OR Apache-2.0
+license-file: LICENSE-MIT
+added:        2026-10-29 by vanvo
+notes:        Native macOS offscreen capture of a synthetic blank document. Both captures show dialog preview before pressing OK. First-party marks shown unchanged in PhotoCraft context remain governed by LICENSE-brand.txt.
